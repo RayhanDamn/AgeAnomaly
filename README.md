@@ -29,7 +29,5 @@ open index.html
 
 Any issues / commits are welcome!
 
-#### Upcoming features:
-1. Balloon pop-up effect
-2. Next birthday count
-3. 
+
+
