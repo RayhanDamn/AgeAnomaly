@@ -1,4 +1,4 @@
-## **Age Anomaly**
+  ## **Age Anomaly**
 
 #### What the project does:
 This project uses gregorian calender and precisely calculates the time passed from the date given by the user. This project also tries to bring 'Bangla vibes' by translating the digits.
@@ -12,7 +12,9 @@ This project uses gregorian calender and precisely calculates the time passed fr
 
 You may directly access it from **[here](https://age-anomaly.vercel.app/)** 
 
-1. Clone it locally
+**Build manually:**
+
+1. Clone repo
 ```
 git clone https://github.com/RayhanDamn/AgeAnomaly.git
 ```
