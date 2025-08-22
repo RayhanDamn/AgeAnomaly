@@ -1,1 +1,33 @@
-# AgeAnomaly
+## **Age Anomaly**
+
+#### What the project does:
+This project uses gregorian calender and precisely calculates time passed from the time given by the user. This project also tries to bring 'Bangla vibes' by translating the digits.
+
+#### Tools/languages used:
+1. Js (Library used: moment.js through cdn)
+2. Html
+3. CSS
+
+#### Steps to build and run it:
+
+You may directly access it from **[here](https://age-anomaly.vercel.app/)** 
+
+1. Clone it locally
+```
+git clone https://github.com/RayhanDamn/AgeAnomaly.git
+```
+2. Enter working directory
+```
+cd AgeAnomaly
+```
+3. Open `index.html` in any browser manually. Or, in terminal:
+```
+open index.html
+```
+
+Any issues / commits are welcome!
+
+#### Upcoming features:
+1. Balloon pop-up effect
+2. Next birthday count
+3. 
