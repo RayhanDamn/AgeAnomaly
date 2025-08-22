@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Age Anomaly </title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="calculator">
+		<h1 align="center">Project: Age Anomaly <br><span>এখানে বিনামূল্যে বয়স বের করা হয়!!</span></h1>
+
+		<br><h2 align="center"> জন্ম তারিখ লিখুন / নির্বাচন করুন: </h2>
+		<div class="input-box">
+			<input type="date" id="date">
+			<button class="bubbly-button" onclick="calculateAge()">Calculate</button>
+		</div>
+
+		<p id="result"> </p>
+
+	</div>
+</div>
+
+<script>
+	
+
+let userInput = document.getElementById("date");
+userInput.max = new Date().toISOString().split("T")[0];
+let result = document.getElementById("result");
+
+function calculateAge() {
+	let birthDate = new Date(userInput.value);
+
+	let birthD = birthDate.getDate();
+	let birthM = birthDate.getMonth()+1;
+	let birthY = birthDate.getFullYear();
+
+	let today = new Date();
+
+
+	const birthMoment = moment({
+	    year: birthY,
+	    month: birthM-1, // Moment.js months are 0-indexed
+	    date: birthD
+	});
+	const currentMoment = moment();
+	const years = currentMoment.diff(birthMoment, 'years');
+	birthMoment.add(years, 'years');
+	            
+	const months = currentMoment.diff(birthMoment, 'months');
+	birthMoment.add(months, 'months');
+	            
+	const days = currentMoment.diff(birthMoment, 'days');
+	            
+	const totalDays = currentMoment.diff(birthMoment, 'days');
+	const totalMonths = currentMoment.diff(birthMoment, 'months');
+	const totalYears = currentMoment.diff(birthMoment, 'years');
+
+	 // Bangla function
+    function BanglaFunction(num) {
+    	let numbar = num.toString();
+    	
+    	let result = '';
+    	for (let i = 0; i < numbar.length; i++) {
+        const char = numbar[i];
+        
+        switch(char) {
+            case '0': result += '০'; break;
+            case '1': result += '১'; break;
+            case '2': result += '২'; break;
+            case '3': result += '৩'; break;
+            case '4': result += '৪'; break;
+            case '5': result += '৫'; break;
+            case '6': result += '৬'; break;
+            case '7': result += '৭'; break;
+            case '8': result += '৮'; break;
+            case '9': result += '৯'; break;
+            default: result 
+        }
+    }
+    return result;
+
+
+    }
+
+    let outputt;
+    let t=1;
+    
+    while(t--) {
+    if ( !birthD || !birthM || !birthY) {
+          result.innerHTML = `<p align="center">আপনার দেয়া জন্ম তারিখটি সঠিক নয়।</p>`;
+   	}else if (birthY > new Date().getFullYear()) {
+         result.innerHTML = `<p align="center">আপনি এখনো একটি Sperm!</p>`;
+    }else {
+   		result.innerHTML = `<p align="center">আপনার বয়স <span>${BanglaFunction(years)}</span> বছর, <span>${BanglaFunction(months)}</span> মাস এবং <span>${BanglaFunction(days)}</span> দিন। </p>`;
+   	}
+
+   }
+
+
+}
+
+function animateButton(e) {
+    e.preventDefault();
+            
+            // Reset animation
+    e.target.classList.remove('animate');
+    e.target.classList.add('animate');
+            
+    setTimeout(function() {
+       e.target.classList.remove('animate');
+    }, 700);
+	}
+
+    var bubblyButtons = document.getElementsByClassName("bubbly-button");
+    for (var i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].addEventListener('click', animateButton, false);
+    }
+
+</script>
+
+</body>
+</html>
