@@ -1,7 +1,7 @@
 ## **Age Anomaly**
 
 #### What the project does:
-This project uses gregorian calender and precisely calculates time passed from the time given by the user. This project also tries to bring 'Bangla vibes' by translating the digits.
+This project uses gregorian calender and precisely calculates the time passed from the date given by the user. This project also tries to bring 'Bangla vibes' by translating the digits.
 
 #### Tools/languages used:
 1. Js (Library used: moment.js through cdn)
