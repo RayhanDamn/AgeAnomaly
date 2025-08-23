@@ -25,7 +25,7 @@ git clone https://github.com/RayhanDamn/AgeAnomaly.git
 ```
 cd AgeAnomaly
 ```
-3. Click the `index.html` file and open it in any browser. Or, in terminal:
+3. Finally, open the `index.html` file in any browser. Or, in terminal type:
 ```
 open index.html
 ```
