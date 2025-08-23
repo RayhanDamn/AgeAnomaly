@@ -4,7 +4,7 @@
 ### What this project does:
 This project uses gregorian calender and precisely calculates the time passed from the date given by the user. This project also tries to bring 'Bangla vibes' by translating the digits.
 
-This project is live **[here](https://age-anomaly.vercel.app/)** 
+This project is live at **[here](https://age-anomaly.vercel.app/)** 
 
 <br>
 
